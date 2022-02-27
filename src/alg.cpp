@@ -3,6 +3,7 @@
 #include <iostream>
 #include "alg.h"
 #include <ctime>
+#include <math.h>
 using namespace std;
 
 
@@ -20,17 +21,11 @@ bool checkPrime(uint64_t value) {
 
 uint64_t nPrime(uint64_t n) {
 
-	uint64_t n;
-	int nPrime;
-	cin >> n;
-	cout << nPrime(n);
-	uint64_t prime = 1;
+uint64_t prime = 1;
 	if (n == 1) return 2;
-	for (int i = 1; i < n; i++)
-	{
+	for (int i = 1; i < n; i++) {
 		prime += 2;
-		while (checkPrime(prime) == 0)
-		{
+		while (checkPrime(prime) == 0) {
 			prime += 2;
 		}
 	}
